@@ -1,0 +1,139 @@
+/* blocks/main-content.css */
+
+.main-content {
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-content__title {
+  font-family: "CustomFont", sans-serif; /* o "Inter", si lo tienes cargado */
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 100px; /* decimal: 100/96 ≈ 1.0417, pero usamos px para precisión */
+  letter-spacing: 0;
+  color: #ffffff;
+  text-align: center;
+  width: 720px;
+  height: 200px;
+  margin: 0 auto; /* para centrarlo horizontalmente */
+  /* No necesitas top/left aquí si el contenedor.*/
+}
+
+.main-content__subtitle {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px; /* decimal: 36/30 = 1.2 */
+  letter-spacing: 0;
+  color: #ffffff;
+  text-align: center;
+  width: 720px;
+  height: 72px;
+  margin: 0 auto; /* centrado horizontalmente */
+  /* No necesitas top/left si el contenedor .main-content ya está posicionado correctamente */
+}
+
+.main-content__image-wrapper {
+  margin: 32px auto;
+  max-width: 984px;
+  overflow: hidden;
+  border: 2px solid #00bfff;
+}
+
+.main-content__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.main-content__section-title {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 58px;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-align: center;
+  width: 830px;
+  margin: 40px auto 20px;
+}
+
+.main-content__text {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-align: center;
+  width: 738px;
+  margin: 0 auto 24px;
+}
+
+.main-content__quote {
+  font-style: italic;
+  padding: 24px;
+  border-left: 4px solid #00bfff;
+  margin: 24px auto;
+  max-width: 800px;
+  text-align: left;
+  background-color: rgba(0, 191, 255, 0.05);
+}
+
+.main-content__quote-text {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.63; /* 163% = 1.63 */
+  letter-spacing: 0;
+  color: #ffffff;
+  text-align: left; /* porque está dentro de un bloque con border-left */
+  width: 722px;
+  margin: 0 auto 12px; /* espacio hacia el autor */
+}
+
+.main-content__quote-author {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-align: right; /* alineación a la derecha */
+  width: 732px;
+  margin: 0 auto; /* centrado horizontalmente, pero texto alineado a la derecha */
+}
+
+.main-content__footer-text {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 32px 16px;
+  }
+
+  .main-content__title {
+    font-size: 36px;
+  }
+
+  .main-content__subtitle {
+    font-size: 16px;
+  }
+
+  .main-content__section-title {
+    font-size: 28px;
+  }
+
+  .main-content__text,
+  .main-content__quote-text {
+    font-size: 14px;
+  }
+}
