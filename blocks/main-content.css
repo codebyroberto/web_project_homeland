@@ -76,11 +76,9 @@
 .main-content__quote {
   font-style: italic;
   padding: 24px;
-  border-left: 4px solid #00bfff;
   margin: 24px auto;
   max-width: 800px;
   text-align: left;
-  background-color: rgba(0, 191, 255, 0.05);
 }
 
 .main-content__quote-text {
