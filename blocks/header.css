@@ -1,0 +1,68 @@
+/* blocks/header.css */
+
+.header {
+  position: relative;
+  padding-top: 34px; /* top: 34px desde el borde superior */
+  height: 68.94px; /* altura del logo */
+  margin-bottom: 40px; /* espacio hacia el contenido principal */
+}
+
+.header__container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px; /* espacio lateral en móvil */
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 513px; /* posición exacta del diseño */
+}
+
+.header__logo-img {
+  width: 254.84px;
+  height: 68.94px;
+  display: block;
+}
+
+.header__avatar {
+  position: absolute;
+  top: 0;
+  right: 20px; /* margen derecho consistente */
+  width: 40px;
+  height: 40px;
+}
+
+.header__avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Responsive: Tablet y móvil === */
+@media (max-width: 768px) {
+  .header {
+    padding-top: 20px;
+    height: auto;
+  }
+
+  .header__logo {
+    left: 20px; /* ajuste móvil */
+    top: 0;
+  }
+
+  .header__logo-img {
+    width: 200px;
+    height: auto;
+  }
+
+  .header__avatar {
+    top: 8px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
+}

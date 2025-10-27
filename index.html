@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,11 +13,14 @@
       content="equipo, empleados, ciudades natales, diversidad, cultura, orígenes, viajes, comunidad, historias personales"
     />
     <title>De Patria a Patria</title>
-    <link rel="stylesheet" type="text/css" href="pages/index.css" />
+    <!-- Enlace al CSS principal -->
+    <link rel="stylesheet" type="text/css" href="../blocks/page.css" />
+    <!-- Fuente local -->
     <style>
       @font-face {
         font-family: "CustomFont";
-        src: url("fonts/your-font.woff") format("woff");
+        src: url("../Inter-4.1/InterVariable.ttf") format("truetype");
+        font-display: swap;
       }
     </style>
   </head>
@@ -25,22 +28,20 @@
     <div class="page__content">
       <!-- HEADER -->
       <header class="header">
-        <div class="header__logo">
-          <img
-            src="images/logo.svg"
-            alt="Tripleten Art Gallery"
-            class="header__logo-img"
-            width="255"
-            height="69"
-          />
-          <span class="header__logo-text">Tripleten Art Gallery</span>
+        <div class="header__container">
+          <div class="header__logo">
+            <img
+              src="./images/logo.svg"
+              alt="Tripleten Art Gallery"
+              class="header__logo-img"
+            />
+          </div>
+          </div>
         </div>
       </header>
-
       <!-- MAIN CONTENT -->
       <main class="main">
         <h1 class="main__title">De patria a patria</h1>
-        <!-- Aquí irán las tarjetas de empleados, imágenes, etc. -->
       </main>
     </div>
   </body>
