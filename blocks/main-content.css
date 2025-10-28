@@ -1,45 +1,37 @@
 /* blocks/main-content.css */
 
 .main-content {
-  padding: 40px 20px;
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
+  padding: 40px 0;
 }
 
 .main-content__title {
-  font-family: "CustomFont", sans-serif; /* o "Inter", si lo tienes cargado */
+  font-family: "CustomFont", sans-serif;
   font-weight: 900;
   font-size: 96px;
-  line-height: 100px; /* decimal: 100/96 ≈ 1.0417, pero usamos px para precisión */
+  line-height: 100px;
   letter-spacing: 0;
   color: #ffffff;
-  text-align: center;
+  margin: 0 auto 8px;
   width: 720px;
-  height: 200px;
-  margin: 0 auto; /* para centrarlo horizontalmente */
-  /* No necesitas top/left aquí si el contenedor.*/
+  text-align: center;
 }
 
 .main-content__subtitle {
   font-family: "CustomFont", sans-serif;
   font-weight: 400;
   font-size: 30px;
-  line-height: 36px; /* decimal: 36/30 = 1.2 */
+  line-height: 36px;
   letter-spacing: 0;
   color: #ffffff;
-  text-align: center;
+  margin: 0 auto 32px;
   width: 720px;
-  height: 72px;
-  margin: 0 auto; /* centrado horizontalmente */
-  /* No necesitas top/left si el contenedor .main-content ya está posicionado correctamente */
+  text-align: center;
 }
 
 .main-content__image-wrapper {
   margin: 32px auto;
   max-width: 984px;
   overflow: hidden;
-  border: 2px solid #00bfff;
 }
 
 .main-content__image {
@@ -56,9 +48,9 @@
   line-height: 58px;
   letter-spacing: 0;
   color: #ffffff;
-  text-align: center;
+  margin: 40px 0 20px;
   width: 830px;
-  margin: 40px auto 20px;
+  text-align: left;
 }
 
 .main-content__text {
@@ -68,16 +60,15 @@
   line-height: 34px;
   letter-spacing: 0;
   color: #ffffff;
-  text-align: center;
+  margin: 0 0 24px;
   width: 738px;
-  margin: 0 auto 24px;
+  text-align: left;
 }
 
 .main-content__quote {
-  font-style: italic;
+  margin: 24px 0;
   padding: 24px;
-  margin: 24px auto;
-  max-width: 800px;
+  max-width: 722px;
   text-align: left;
 }
 
@@ -85,12 +76,10 @@
   font-family: "CustomFont", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.63; /* 163% = 1.63 */
+  line-height: 1.63;
   letter-spacing: 0;
   color: #ffffff;
-  text-align: left; /* porque está dentro de un bloque con border-left */
-  width: 722px;
-  margin: 0 auto 12px; /* espacio hacia el autor */
+  margin: 0 0 12px;
 }
 
 .main-content__quote-author {
@@ -100,38 +89,18 @@
   line-height: 34px;
   letter-spacing: 0;
   color: #ffffff;
-  text-align: right; /* alineación a la derecha */
-  width: 732px;
-  margin: 0 auto; /* centrado horizontalmente, pero texto alineado a la derecha */
+  text-align: right;
+  margin: 0;
 }
 
-.main-content__footer-text {
-  font-size: 12px;
-  opacity: 0.6;
-  margin-top: 40px;
-  text-align: center;
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .main-content {
-    padding: 32px 16px;
-  }
-
-  .main-content__title {
-    font-size: 36px;
-  }
-
-  .main-content__subtitle {
-    font-size: 16px;
-  }
-
-  .main-content__section-title {
-    font-size: 28px;
-  }
-
-  .main-content__text,
-  .main-content__quote-text {
-    font-size: 14px;
-  }
+.main-content__final-text {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 24px 0 40px;
+  width: 722px;
+  text-align: left;
 }

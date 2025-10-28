@@ -1,3 +1,5 @@
+/* blocks/page.css */
+
 .page {
   min-height: 100vh;
   background-color: #2a2c2f;
@@ -7,7 +9,7 @@
 }
 
 .page__content {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
 }

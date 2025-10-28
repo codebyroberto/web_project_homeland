@@ -2,22 +2,22 @@
 
 .header {
   position: relative;
-  padding-top: 34px; /* top: 34px desde el borde superior */
-  height: 68.94px; /* altura del logo */
-  margin-bottom: 40px; /* espacio hacia el contenido principal */
+  padding-top: 34px;
+  height: 68.94px;
+  margin-bottom: 40px;
 }
 
 .header__container {
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px; /* espacio lateral en móvil */
+  padding: 0 20px;
 }
 
 .header__logo {
   position: absolute;
   top: 0;
-  left: 513px; /* posición exacta del diseño */
+  left: 513px;
 }
 
 .header__logo-img {
@@ -29,7 +29,7 @@
 .header__avatar {
   position: absolute;
   top: 0;
-  right: 20px; /* margen derecho consistente */
+  right: 20px;
   width: 40px;
   height: 40px;
 }
@@ -42,7 +42,7 @@
   display: block;
 }
 
-/* === Responsive: Tablet y móvil === */
+/* Responsive */
 @media (max-width: 768px) {
   .header {
     padding-top: 20px;
@@ -50,7 +50,7 @@
   }
 
   .header__logo {
-    left: 20px; /* ajuste móvil */
+    left: 20px;
     top: 0;
   }
 
