@@ -26,23 +26,7 @@
   display: block;
 }
 
-.header__avatar {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-}
-
-.header__avatar-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Responsive */
+/* Tablet */
 @media (max-width: 768px) {
   .header {
     padding-top: 20px;
@@ -58,11 +42,19 @@
     width: 200px;
     height: auto;
   }
+}
 
-  .header__avatar {
-    top: 8px;
-    right: 16px;
-    width: 32px;
-    height: 32px;
+/* Mobile */
+@media (max-width: 320px) {
+  .header {
+    padding-top: 16px;
+  }
+
+  .header__logo {
+    left: 12px;
+  }
+
+  .header__logo-img {
+    width: 180px;
   }
 }
