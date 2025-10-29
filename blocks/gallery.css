@@ -1,6 +1,5 @@
 /* blocks/gallery.css */
 
-/* Define la fuente local */
 @font-face {
   font-family: "CustomFont";
   src: url("../Inter-4.1/InterVariable.ttf") format("truetype");
@@ -8,9 +7,11 @@
 }
 
 .gallery {
-  padding: 40px 20px;
-  max-width: 1280px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: min(1280px, 100% - 40px);
+  justify-content: center;
+  padding: 40px 0;
+  gap: 0;
 }
 
 .gallery__title {
@@ -23,6 +24,7 @@
   margin: 0 auto 8px;
   width: 720px;
   text-align: center;
+  justify-self: center;
 }
 
 .gallery__subtitle {
@@ -35,6 +37,7 @@
   margin: 0 auto 32px;
   width: 720px;
   text-align: center;
+  justify-self: center;
 }
 
 .gallery__image {
@@ -44,6 +47,7 @@
   height: auto;
   object-fit: cover;
   margin: 32px auto;
+  justify-self: center;
 }
 
 .gallery__section-title {
@@ -102,7 +106,8 @@
 /* Tablet */
 @media (max-width: 768px) {
   .gallery {
-    padding: 32px 16px;
+    padding: 32px 0;
+    grid-template-columns: min(700px, 100% - 32px);
   }
 
   .gallery__title {
@@ -155,7 +160,8 @@
 /* Mobile */
 @media (max-width: 320px) {
   .gallery {
-    padding: 24px 12px;
+    padding: 24px 0;
+    grid-template-columns: 100%;
   }
 
   .gallery__title {
