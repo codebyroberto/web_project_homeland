@@ -8,7 +8,6 @@
 
 .gallery {
   display: grid;
-  /* Columna principal de 984px (ancho de imagen) */
   grid-template-columns: min(984px, 100% - 40px);
   justify-content: center;
   padding: 40px 0;
@@ -25,7 +24,7 @@
   margin: 0 auto 8px;
   width: 720px;
   text-align: center;
-  justify-self: center; /* Centrado (correcto) */
+  justify-self: center;
 }
 
 .gallery__subtitle {
@@ -38,12 +37,12 @@
   margin: 0 auto 32px;
   width: 720px;
   text-align: center;
-  justify-self: center; /* Centrado (correcto) */
+  justify-self: center;
 }
 
 .gallery__image {
   display: block;
-  width: 100%; /* Ocupa 100% de la columna de 984px (correcto) */
+  width: 100%;
   height: auto;
   object-fit: cover;
   margin: 32px auto;
@@ -59,7 +58,6 @@
   margin: 40px 0 20px;
   width: 830px;
   text-align: left;
-  /* A la izquierda de la columna (correcto) */
 }
 
 .gallery__text,
@@ -73,26 +71,16 @@
   margin: 0 0 24px;
   width: 738px;
   text-align: left;
-  /* A la izquierda de la columna (correcto) */
 }
-
-/* --- CAMBIO CLAVE AQUÍ --- */
-
 .gallery__quote {
   margin: 24px 0;
-  padding: 24px;
-
-  /* CAMBIADO:
-     Le damos el MISMO ancho que .gallery__text
-  */
+  /*  Padding solo arriba y abajo (24px), 
+     y 0px a los lados.*/
+  padding: 24px 0;
   width: 738px;
-
-  /* AÑADIDO:
-     Para que el padding (24px) no se sume al ancho
-     y se mantenga alineado.
+  /* box-sizing: border-box; 
+     (Ya no es necesario si no hay padding horizontal) 
   */
-  box-sizing: border-box;
-
   text-align: left;
 }
 
@@ -104,11 +92,6 @@
   letter-spacing: 0;
   color: #ffffff;
   margin: 0 0 12px;
-
-  /* CAMBIADO:
-     Quitamos el max-width que molestaba.
-  */
-  /* max-width: 722px; */
 }
 
 .gallery__quote-author {
@@ -118,10 +101,6 @@
   line-height: 34px;
   letter-spacing: 0;
   color: #ffffff;
-
-  /* PERFECTO: 
-     Se alineará a la derecha de su contenedor (de 738px).
-  */
   text-align: right;
   margin: 0;
 }
@@ -165,19 +144,15 @@
 
   .gallery__quote {
     margin: 20px 0;
-    padding: 20px;
-
-    /* CAMBIADO:
-       Para que coincida con el texto en tablet
-    */
+    /* CAMBIADO: Padding solo vertical */
+    padding: 20px 0;
     width: 600px;
-    box-sizing: border-box; /* Añadido para consistencia */
   }
 
   .gallery__quote-text {
     font-size: 14px;
     line-height: 1.5;
-    max-width: 100%; /* Esto está bien para tablet */
+    max-width: 100%;
   }
 
   .gallery__quote-author {
@@ -225,10 +200,12 @@
 
   .gallery__quote {
     margin: 16px 0;
-    padding: 16px;
-    width: 100%; /* Bien para mobile */
+    /* CAMBIADO: Padding solo vertical */
+    padding: 16px 0;
+
+    width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; (No es necesario) */
   }
 
   .gallery__quote-text {
