@@ -1,2 +1,29 @@
 /* vendor/fonts.css */
-@import url("../Inter-4.1/web/inter.css");
+
+/* --- Regular (Peso 400) --- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../Inter-4.1/web/Inter-Regular.woff2") format("woff2");
+}
+
+/* --- Bold (Peso 700) --- */
+/* (Por si acaso) */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../Inter-4.1/web/Inter-Bold.woff2") format("woff2");
+}
+
+/* --- Black (Peso 900) --- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../Inter-4.1/web/Inter-Black.woff2") format("woff2");
+}
