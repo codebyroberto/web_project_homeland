@@ -1,7 +1,7 @@
 /* pages/index.css */
 
 /* ¡ESTA DEBE SER LA LÍNEA 1! */
-
+@import url("/vendor/normalize.css");
 /* Esta es la línea 2 */
 @import url("../vendor/fonts.css");
 
