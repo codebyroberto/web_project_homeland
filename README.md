@@ -6,6 +6,7 @@ Proyecto web para **Homeland** – Una celebración de las raíces culturales y 
 
 Puedes visitar el sitio desplegado en el siguiente enlace:
 [https://codebyroberto.github.io/web_project_homeland/](https://codebyroberto.github.io/web_project_homeland/)
+_(Nota: El enlace puede cambiar si usaste un nombre de repositorio nuevo para solucionar el error de "repositorio demasiado grande")_
 
 ## 📌 Descripción
 
@@ -21,9 +22,10 @@ A través de tipografía cuidadosa, imágenes evocadoras y un diseño minimalist
 - **HTML5** – Estructura semántica
 - **CSS3** – Estilos modulares con metodología **BEM** y `@import`
 - **normalize.css** – Para asegurar consistencia de estilos entre navegadores
-- **Fuentes locales** – Inter Variable (cargada localmente para mejor rendimiento)
+- **Fuentes locales** – Inter (cargada localmente con formato `.woff2`)
 - **Responsive Design** – Compatible con desktop (1280px), tablet (768px) y mobile (320px)
-- **Sin frameworks** – Código 100% vanilla
+- **Git** – Control de versiones
+- **Archivos de Configuración** – `.editorconfig` y `.gitignore`
 
 ## 📏 Breakpoints
 
@@ -45,8 +47,9 @@ El diseño está optimizado para tres tamaños de pantalla:
 
 - ✅ **BEM** para clases CSS (evita conflictos y mejora mantenibilidad)
 - ✅ **`normalize.css`** para un reseteo de estilos base consistente.
-- ✅ **Fuentes locales** (mejor rendimiento y privacidad)
-- ✅ **Valores relativos** (`%`, `fr`) en el layout de Grid.
+- ✅ **`.gitignore`** para excluir archivos innecesarios del repositorio.
+- ✅ **`.editorconfig`** para mantener un estilo de código consistente.
+- ✅ **Fuentes web (`.woff2`)** cargadas localmente para el mejor rendimiento.
 - ✅ **`line-height` en decimales** (ej. `1.5`) para escalabilidad
 - ✅ **`object-fit: cover`** para imágenes responsivas
 - ✅ **Metaetiquetas SEO** y accesibilidad (`alt`, `lang`, `description`)
@@ -54,6 +57,8 @@ El diseño está optimizado para tres tamaños de pantalla:
 ## 🗂 Estructura del proyecto
 
 web_project_homeland/
+├── .editorconfig # Configuración del editor
+├── .gitignore # Archivos ignorados por Git
 ├── index.html # Archivo HTML principal
 ├── pages/
 │ └── index.css # Archivo CSS principal (importa todos los bloques)
@@ -66,9 +71,12 @@ web_project_homeland/
 │ ├── hero-image.jpg
 │ ├── logo.svg
 │ └── favicon.png # Favicon del proyecto
-├── Inter-4.1/ # Fuente Inter Variable
-│ └── InterVariable.ttf
+├── Inter-4.1/ # Fuente Inter (solo formatos web)
+│ └── web/
+│ ├── inter.css
+│ └── (archivos .woff2...)
 ├── vendor/ # CSS de terceros
+│ ├── fonts.css # Importación de fuentes
 │ └── normalize.css
 └── README.md
 
@@ -76,11 +84,10 @@ web_project_homeland/
 
 - ✅ Diseño responsivo en tres breakpoints (1280px, 768px, 320px)
 - ✅ Metodología **BEM** para clases CSS
-- ✅ Uso de **`normalize.css`**
-- ✅ Fuentes descargadas y enlazadas localmente
-- ✅ Imágenes optimizadas con `object-fit: cover`
-- ✅ `line-height` en valores decimales (ej. `1.5`)
+- ✅ Uso de **`normalize.css`** y **`fonts.css`** en `vendor/`
+- ✅ Fuentes optimizadas (`.woff2`) enlazadas localmente
 - ✅ Metaetiquetas SEO y accesibilidad básica
+- ✅ Repositorio limpio con `.gitignore` y `.editorconfig`
 
 ## 📝 Autor
 

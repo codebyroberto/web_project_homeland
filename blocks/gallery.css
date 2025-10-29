@@ -1,11 +1,4 @@
 /* blocks/gallery.css */
-
-@font-face {
-  font-family: "CustomFont";
-  src: url("../Inter-4.1/InterVariable.ttf") format("truetype");
-  font-display: swap;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: min(984px, 100% - 40px);
@@ -15,7 +8,7 @@
 }
 
 .gallery__title {
-  font-family: "CustomFont", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 900;
   font-size: 96px;
   line-height: 100px;
@@ -28,7 +21,7 @@
 }
 
 .gallery__subtitle {
-  font-family: "CustomFont", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
@@ -49,7 +42,7 @@
 }
 
 .gallery__section-title {
-  font-family: "CustomFont", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 900;
   font-size: 54px;
   line-height: 58px;
@@ -62,7 +55,7 @@
 
 .gallery__text,
 .gallery__final-text {
-  font-family: "CustomFont", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
@@ -85,7 +78,7 @@
 }
 
 .gallery__quote-text {
-  font-family: "CustomFont", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.63;
@@ -95,7 +88,7 @@
 }
 
 .gallery__quote-author {
-  font-family: "CustomFont", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
