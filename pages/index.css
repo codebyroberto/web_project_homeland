@@ -1,7 +1,12 @@
 /* pages/index.css */
 
+/* ¡ESTA DEBE SER LA LÍNEA 1! */
+@import url("../vendor/normalize.css");
+
+/* Esta es la línea 2 */
 @import url("../vendor/fonts.css");
 
+/* El resto se queda igual */
 @import url("../blocks/page.css");
 @import url("../blocks/header.css");
 @import url("../blocks/gallery.css");
