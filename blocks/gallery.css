@@ -8,7 +8,8 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: min(1280px, 100% - 40px);
+  /* Columna principal de 984px (ancho de imagen) */
+  grid-template-columns: min(984px, 100% - 40px);
   justify-content: center;
   padding: 40px 0;
   gap: 0;
@@ -24,7 +25,7 @@
   margin: 0 auto 8px;
   width: 720px;
   text-align: center;
-  justify-self: center;
+  justify-self: center; /* Centrado (correcto) */
 }
 
 .gallery__subtitle {
@@ -37,17 +38,15 @@
   margin: 0 auto 32px;
   width: 720px;
   text-align: center;
-  justify-self: center;
+  justify-self: center; /* Centrado (correcto) */
 }
 
 .gallery__image {
   display: block;
-  width: 100%;
-  max-width: 984px;
+  width: 100%; /* Ocupa 100% de la columna de 984px (correcto) */
   height: auto;
   object-fit: cover;
   margin: 32px auto;
-  justify-self: center;
 }
 
 .gallery__section-title {
@@ -60,6 +59,7 @@
   margin: 40px 0 20px;
   width: 830px;
   text-align: left;
+  /* A la izquierda de la columna (correcto) */
 }
 
 .gallery__text,
@@ -73,12 +73,26 @@
   margin: 0 0 24px;
   width: 738px;
   text-align: left;
+  /* A la izquierda de la columna (correcto) */
 }
+
+/* --- CAMBIO CLAVE AQUÍ --- */
 
 .gallery__quote {
   margin: 24px 0;
   padding: 24px;
-  max-width: 722px;
+
+  /* CAMBIADO:
+     Le damos el MISMO ancho que .gallery__text
+  */
+  width: 738px;
+
+  /* AÑADIDO:
+     Para que el padding (24px) no se sume al ancho
+     y se mantenga alineado.
+  */
+  box-sizing: border-box;
+
   text-align: left;
 }
 
@@ -90,6 +104,11 @@
   letter-spacing: 0;
   color: #ffffff;
   margin: 0 0 12px;
+
+  /* CAMBIADO:
+     Quitamos el max-width que molestaba.
+  */
+  /* max-width: 722px; */
 }
 
 .gallery__quote-author {
@@ -99,6 +118,10 @@
   line-height: 34px;
   letter-spacing: 0;
   color: #ffffff;
+
+  /* PERFECTO: 
+     Se alineará a la derecha de su contenedor (de 738px).
+  */
   text-align: right;
   margin: 0;
 }
@@ -123,7 +146,7 @@
   }
 
   .gallery__image {
-    max-width: 800px;
+    width: 100%;
     margin: 24px auto;
   }
 
@@ -143,12 +166,18 @@
   .gallery__quote {
     margin: 20px 0;
     padding: 20px;
-    max-width: 600px;
+
+    /* CAMBIADO:
+       Para que coincida con el texto en tablet
+    */
+    width: 600px;
+    box-sizing: border-box; /* Añadido para consistencia */
   }
 
   .gallery__quote-text {
     font-size: 14px;
     line-height: 1.5;
+    max-width: 100%; /* Esto está bien para tablet */
   }
 
   .gallery__quote-author {
@@ -161,7 +190,7 @@
 @media (max-width: 320px) {
   .gallery {
     padding: 24px 0;
-    grid-template-columns: 100%;
+    grid-template-columns: min(100%, 100% - 32px);
   }
 
   .gallery__title {
@@ -197,12 +226,15 @@
   .gallery__quote {
     margin: 16px 0;
     padding: 16px;
+    width: 100%; /* Bien para mobile */
     max-width: 100%;
+    box-sizing: border-box;
   }
 
   .gallery__quote-text {
     font-size: 14px;
     line-height: 1.5;
+    max-width: 100%;
   }
 
   .gallery__quote-author {

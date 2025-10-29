@@ -1,10 +1,13 @@
 /* blocks/header.css */
 
 .header {
-  position: relative;
   padding-top: 34px;
-  height: 68.94px;
   margin-bottom: 40px;
+
+  /* AÑADIDO: Convertimos el header en un contenedor flex */
+  display: flex;
+  /* AÑADIDO: Centramos su contenido (el logo) horizontalmente */
+  justify-content: center;
 }
 
 .header__container {
@@ -15,9 +18,9 @@
 }
 
 .header__logo {
-  position: absolute;
-  top: 0;
-  left: 513px;
+  /* position: absolute; ya no es necesario */
+  /* top: 0; ya no es necesario */
+  /* left: 513px; ya no es necesario */
 }
 
 .header__logo-img {
@@ -34,8 +37,8 @@
   }
 
   .header__logo {
-    left: 20px;
-    top: 0;
+    /* left: 20px; ya no es necesario */
+    /* top: 0; ya no es necesario */
   }
 
   .header__logo-img {
@@ -51,7 +54,7 @@
   }
 
   .header__logo {
-    left: 12px;
+    /* left: 12px; ya no es necesario */
   }
 
   .header__logo-img {
