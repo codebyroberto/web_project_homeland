@@ -1,0 +1,63 @@
+/* blocks/header.css */
+
+.header {
+  padding-top: 34px;
+  margin-bottom: 40px;
+
+  /* AÑADIDO: Convertimos el header en un contenedor flex */
+  display: flex;
+  /* AÑADIDO: Centramos su contenido (el logo) horizontalmente */
+  justify-content: center;
+}
+
+.header__container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/*
+.header__logo {
+  /* position: absolute; ya no es necesario */
+/* top: 0; ya no es necesario */
+/* left: 513px; ya no es necesario 
+}*/
+
+.header__logo-img {
+  width: 254.84px;
+  height: 68.94px;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .header {
+    padding-top: 20px;
+    height: auto;
+  }
+  /*
+  .header__logo {
+    /* left: 20px; ya no es necesario */
+  /* top: 0; ya no es necesario 
+  }*/
+
+  .header__logo-img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+  .header {
+    padding-top: 16px;
+  }
+  /*
+  .header__logo {
+    /* left: 12px; ya no es necesario 
+  }*/
+
+  .header__logo-img {
+    width: 180px;
+  }
+}
