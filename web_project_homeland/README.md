@@ -1,8 +1,8 @@
-# web_project_homeland (proyecto 6)
+# web_project_homeland (proyecto 6).
 
 Proyecto web para **Homeland** – Una celebración de las raíces culturales y orígenes geográficos del equipo.
 
-## 🚀 Ver el proyecto en vivo
+## 🚀 Ver el proyecto en vivo.
 
 Puedes visitar el sitio desplegado en el siguiente enlace:
 [https://codebyroberto.github.io/web_project_homeland/](https://codebyroberto.github.io/web_project_homeland/)
