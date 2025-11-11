@@ -1,7 +1,7 @@
 /* ===== PHOTO GRID ===== */
 .photo-grid {
   padding: 60px 20px;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
   text-align: center;
 }
 
@@ -13,10 +13,12 @@
 
 .photo-grid__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+  grid-template-rows: auto; /* Filas automáticas */
   gap: 16px;
   max-width: 1280px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .photo-grid__item {
@@ -25,64 +27,69 @@
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .photo-grid__item:hover {
   transform: scale(1.05);
 }
 
-/* ===== PLACES ===== */
-.places {
-  padding: 60px 20px;
-  background-color: #ffffff;
-  text-align: center;
+/* Tablet */
+@media (max-width: 768px) {
+  .photo-rid__container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+
+  .photo-grid__item {
+    height: 150px;
+  }
 }
 
-.places__title {
-  font-size: 28px;
-  margin-bottom: 40px;
-  color: #333;
-}
+/* Mobile */
+@media (max-width: 480px) {
+  .photo-grid__container {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
 
-.place-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 300px;
-  margin: 0 auto 30px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  .photo-grid__item {
+    height: 120px;
+  }
 }
-
-.place-card:hover {
-  transform: translateY(-5px);
-}
-
-.place-card__image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
+/* ===== PLACE CARD - ARTISTAS ===== */
 .place-card__city {
-  font-size: 20px;
-  margin: 10px 0 5px;
-  color: #2c3e50;
+  font-size: 72px;
+  font-weight: 900;
 }
 
-.place-card__description {
-  font-size: 14px;
-  color: #7f8c8d;
-  line-height: 1.5;
-  margin: 0 0 15px;
+.place-card__info {
+  margin: 15px 0;
   text-align: left;
 }
 
+.place-card__artists-label {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.place-card__artists {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===== PLACE CARD - DESCRIPCIÓN ===== */
+.place-card__description {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 15px 0;
+  text-align: left;
+}
+
+/* ===== PLACE CARD - BOTÓN ===== */
 .place-card__nft-button {
   display: inline-block;
   padding: 8px 16px;
@@ -93,60 +100,9 @@
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
 .place-card__nft-button:hover {
   background-color: #2980b9;
-}
-/* ===== RESPONSIVE ===== */
-
-/* Tablet */
-@media (max-width: 768px) {
-  .photo-grid__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .photo-grid__item {
-    height: 150px;
-  }
-
-  .places {
-    padding: 40px 10px;
-  }
-
-  .place-card {
-    max-width: 100%;
-    margin: 0 0 20px;
-  }
-
-  .place-card__image {
-    height: 150px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .photo-grid__container {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-grid__item {
-    height: 120px;
-  }
-
-  .places__title {
-    font-size: 24px;
-  }
-
-  .place-card {
-    padding: 15px;
-  }
-
-  .place-card__image {
-    height: 120px;
-  }
-
-  .place-card__description {
-    font-size: 12px;
-  }
 }
