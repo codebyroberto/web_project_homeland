@@ -27,3 +27,6 @@
   font-display: swap;
   src: url("../Inter-4.1/web/Inter-Black.woff2") format("woff2");
 }
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
