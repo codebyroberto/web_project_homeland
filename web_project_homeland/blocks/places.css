@@ -1,7 +1,6 @@
 /* ===== PHOTO GRID ===== */
 .photo-grid {
   padding: 60px 20px;
-  /*background-color: #f5f5f5;*/
   text-align: center;
 }
 
@@ -9,11 +8,12 @@
   font-size: 28px;
   margin-bottom: 40px;
   color: #333;
+  font-weight: 700;
 }
 
 .photo-grid__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
   grid-template-rows: auto; /* Filas automáticas */
   gap: 16px;
   max-width: 1280px;
@@ -31,78 +31,109 @@
 }
 
 .photo-grid__item:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-  .photo-rid__container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  }
-
-  .photo-grid__item {
-    height: 150px;
-  }
+/* ===== PLACE CARD ===== */
+.place-card {
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto 60px;
+  text-align: left;
+  border-radius: 12px;
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-  .photo-grid__container {
-    grid-template-columns: 1fr; /* 1 columna */
-  }
-
-  .photo-grid__item {
-    height: 120px;
-  }
+.place-card__city {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0 0 20px;
+  font-weight: 900;
+  line-height: 1.2;
 }
-/* ===== PLACE CARD - ARTISTAS ===== */
+/* ===== PLACE CARD - HEADER ===== */
+.place-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 40px; /* Ajusta este valor para reducir o aumentar el espacio */
+}
+
 .place-card__city {
   font-size: 72px;
+  color: #ffffff;
+  margin: 0;
   font-weight: 900;
+  line-height: 1.2;
 }
 
-.place-card__info {
-  margin: 15px 0;
+.place-card__artists {
+  flex: 0 0 200px; /* Ancho más pequeño para ARTISTAS */
   text-align: left;
 }
 
 .place-card__artists-label {
   font-size: 12px;
-  color: #aaaaaa;
-  margin: 0 0 5px;
+  color: #999;
+  margin: 0 0 8px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.place-card__artists {
-  font-size: 18px;
+.place-card__artists-names {
+  font-size: 14px;
   color: #ffffff;
   margin: 0;
   line-height: 1.4;
 }
 
-/* ===== PLACE CARD - DESCRIPCIÓN ===== */
+/* Contenido: imagen + texto */
+.place-card__content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.place-card__image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.place-card__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .place-card__description {
   font-size: 18px;
   color: #ffffff;
-  line-height: 1.5;
-  margin: 15px 0;
-  text-align: left;
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* ===== PLACE CARD - BOTÓN ===== */
+/* Botón con degradado */
 .place-card__nft-button {
   display: inline-block;
-  padding: 8px 16px;
-  background-color: #3498db;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
 }
 
 .place-card__nft-button:hover {
-  background-color: #2980b9;
+  background: linear-gradient(90deg, #2980b9, #1a5276);
+  transform: translateY(-2px);
 }
