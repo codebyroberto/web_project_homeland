@@ -7,18 +7,15 @@
 .photo-grid__title {
   font-size: 28px;
   margin-bottom: 40px;
-  color: #333;
   font-weight: 700;
 }
 
 .photo-grid__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-  grid-template-rows: auto; /* Filas automáticas */
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   max-width: 1280px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .photo-grid__item {
@@ -27,7 +24,6 @@
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  box-sizing: border-box;
 }
 
 .photo-grid__item:hover {
@@ -44,37 +40,18 @@
 }
 
 .place-card__city {
-  font-size: 28px;
-  color: #ffffff;
   margin: 0 0 20px;
   font-weight: 900;
   line-height: 1.2;
 }
-/* ===== PLACE CARD - HEADER ===== */
-.place-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  gap: 40px; /* Ajusta este valor para reducir o aumentar el espacio */
-}
 
-.place-card__city {
-  font-size: 72px;
-  color: #ffffff;
-  margin: 0;
-  font-weight: 900;
-  line-height: 1.2;
-}
-
+/* ===== ARTISTAS ===== */
 .place-card__artists {
-  flex: 0 0 200px; /* Ancho más pequeño para ARTISTAS */
+  margin: 0 0 20px;
   text-align: left;
 }
 
 .place-card__artists-label {
-  font-size: 12px;
-  color: #999;
   margin: 0 0 8px;
   font-weight: bold;
   text-transform: uppercase;
@@ -82,18 +59,15 @@
 }
 
 .place-card__artists-names {
-  font-size: 14px;
-  color: #ffffff;
   margin: 0;
   line-height: 1.4;
 }
 
-/* Contenido: imagen + texto */
+/* ===== CONTENIDO: IMAGEN + TEXTO ===== */
 .place-card__content {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  margin-bottom: 30px;
 }
 
 .place-card__image {
@@ -101,24 +75,18 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .place-card__text {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .place-card__description {
-  font-size: 18px;
-  color: #ffffff;
+  margin: 0 0 15px;
   line-height: 1.6;
-  margin: 0;
 }
 
-/* Botón con degradado */
+/* ===== BOTÓN NFT ===== */
 .place-card__nft-button {
   display: inline-block;
   padding: 10px 24px;
@@ -129,11 +97,50 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
   margin-top: 10px;
 }
 
 .place-card__nft-button:hover {
   background: linear-gradient(90deg, #2980b9, #1a5276);
   transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .photo-grid__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .photo-grid__item {
+    height: 160px;
+  }
+
+  .place-card__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .place-card__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-grid__container {
+    grid-template-columns: 1fr;
+  }
+  .photo-grid__item {
+    height: 140px;
+  }
+
+  .place-card {
+    padding: 25px 15px;
+  }
+
+  .place-card__nft-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
 }

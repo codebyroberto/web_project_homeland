@@ -13,12 +13,6 @@
       content="equipo, empleados, ciudades natales, diversidad, cultura, orígenes, viajes, comunidad, historias personales"
     />
     <title>De Patria a Patria</title>
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="pages/index.css" />
   </head>
   <body>
@@ -79,77 +73,75 @@
           </p>
         </section>
       </main>
-      <!--INICIO DEL PROYECTO_6-->
+
+      <!-- INICIO DEL PROYECTO_6 -->
       <section class="photo-grid">
+        <h2 class="photo-grid__title">Galería de lugares</h2>
         <div class="photo-grid__container">
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_vista_ bahia.png"
-            alt="Foto a bahia"
+            alt="Bahía"
           />
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_gales_ch.png"
-            alt="Imagen de Gales"
+            alt="Gales"
           />
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_atardecer.png"
-            alt="Foto de un __item_atardecer"
+            alt="Atardecer"
           />
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_ciudadrio.png"
-            alt="Foto vista al rio de la ciudad"
+            alt="Ciudad al río"
           />
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_campo.png"
-            alt="Foto de un campo verde"
+            alt="Campo"
           />
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_zonaverde.png"
-            alt="Foto de una zona verde de una ciudad"
+            alt="Zona verde"
           />
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_casita.png"
-            alt="Foto de una casa en forma de piramide"
+            alt="Casita"
           />
           <img
-            class="photo-grid_item"
+            class="photo-grid__item"
             src="images/__item_casas.png"
-            alt="Foto de 2 casas en el bosque"
+            alt="Casas en bosque"
           />
         </div>
       </section>
+
       <section class="place">
-        <!--Tarjeta 1-->
+        <!-- Tarjeta 1: Cricieth, Gales -->
         <article class="place-card">
-          <div class="place-card__header">
-            <h2 class="place-card__city">
-              Cricieth, <br />
-              Gales
-            </h2>
-
-            <div class="place-card__artists">
-              <p class="place-card__artists-label">ARTISTAS</p>
-              <p class="place-card__artists-names">
-                Steffan Warren, editor jefe<br />Kseniya Glagoleva, gerente de
-                proyectos
-              </p>
-            </div>
-          </div>
-
+          <h2 class="place-card__city">
+            Cricieth, <br />
+            Gales
+          </h2>
           <div class="place-card__content">
             <img
               class="place-card__image"
               src="images/__image_gales_g.png"
               alt="Cricieth, Gales"
             />
-
-            <div class="place-card__text">
+            <div class="place-card__text-col">
+              <div class="place-card__artists">
+                <p class="place-card__artists-label">ARTISTAS</p>
+                <p class="place-card__artists-names">
+                  Steffan Warren, editor jefe<br />Kseniya Glagoleva, gerente de
+                  proyectos
+                </p>
+              </div>
               <p class="place-card__description">
                 Las ruinas medievales del castillo de Cricieth dominan la ciudad
                 desde una roca que extiende sobre el mar. Se cree que fue
@@ -158,7 +150,6 @@
                 Snowdonia, se ha convertido en un popular destino turístico
                 durante los meses de verano.
               </p>
-
               <p class="place-card__description">
                 A pocos pasos de camino al castillo, puedes disfrutar de los
                 mejores helados del mundo en Cadwalader's, cuyo ingrediente
@@ -175,7 +166,87 @@
             Compra esta obra como NFT
           </button>
         </article>
+
+        <!-- Tarjeta 2: Berea, EE. UU. -->
+        <article class="place-card">
+          <h2 class="place-card__city">
+            Berea, <br />
+            EE. UU.
+          </h2>
+          <div class="place-card__content">
+            <img
+              class="place-card__image"
+              src="images/__item_campo.png"
+              alt="Berea, EE. UU."
+            />
+            <div class="place-card__text-col">
+              <div class="place-card__artists">
+                <p class="place-card__artists-label">ARTISTAS</p>
+                <p class="place-card__artists-names">
+                  Steffan Warren, editor jefe<br />Kseniya Glagoleva, gerente de
+                  proyectos
+                </p>
+              </div>
+              <p class="place-card__description">
+                Berea es una ciudad universitaria en Kentucky, famosa por su
+                artesanía y su compromiso con la educación. Es conocida como "la
+                ciudad sin tiendas", ya que no permite cadenas comerciales,
+                preservando así su carácter único.
+              </p>
+              <p class="place-card__description">
+                La ciudad también es conocida por su festival anual de
+                artesanía, que atrae a visitantes de todo el mundo. Además,
+                Berea es hogar de la Universidad de Berea, la primera
+                institución de educación superior en los Estados Unidos que
+                admitió a estudiantes de todas las razas y géneros.
+              </p>
+            </div>
+          </div>
+          <button class="place-card__nft-button">
+            Compra esta obra como NFT
+          </button>
+        </article>
+
+        <!-- Tarjeta 3: Muramvya, Burundi -->
+        <article class="place-card">
+          <h2 class="place-card__city">
+            Muramvya, <br />
+            Burundi
+          </h2>
+          <div class="place-card__content">
+            <img
+              class="place-card__image"
+              src="images/__item_zonaverde.png"
+              alt="Muramvya, Burundi"
+            />
+            <div class="place-card__text-col">
+              <div class="place-card__artists">
+                <p class="place-card__artists-label">ARTISTAS</p>
+                <p class="place-card__artists-names">
+                  Steffan Warren, editor jefe<br />Kseniya Glagoleva, gerente de
+                  proyectos
+                </p>
+              </div>
+              <p class="place-card__description">
+                Muramvya es una región montañosa en el centro de Burundi,
+                conocida por su café y su rica cultura tradicional. Sus paisajes
+                verdes y sus comunidades acogedoras la convierten en un lugar
+                único para visitar.
+              </p>
+              <p class="place-card__description">
+                La región también es conocida por sus festivales culturales,
+                donde los habitantes celebran su herencia a través de la música,
+                la danza y la artesanía. Muramvya es un ejemplo perfecto de cómo
+                la tradición y la modernidad pueden coexistir en armonía.
+              </p>
+            </div>
+          </div>
+          <button class="place-card__nft-button">
+            Compra esta obra como NFT
+          </button>
+        </article>
       </section>
+
       <footer class="footer">
         <p class="footer__text">
           © 2025 Roberto de la Rosa Antunez. Todos los derechos reservados.
