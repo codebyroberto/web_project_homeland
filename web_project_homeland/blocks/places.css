@@ -1,3 +1,7 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+}
 /* ===== PHOTO GRID ===== */
 .photo-grid {
   padding: 60px 20px;
@@ -45,13 +49,36 @@
   font-size: 72px;
   line-height: 1.2;
 }
+/*Se agrego*/
+.place-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 20px;
+}
 
 /* ===== ARTISTAS ===== */
 .place-card__artists {
   margin: 0 0 20px;
   text-align: left;
 }
-
+/*Se agrego*/
+.place-card__image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/*se agrego*/
+.place-card__text {
+  flex: 1;
+}
+/*se agrego*/
+.place-card__description {
+  margin: 0 0 15px;
+  line-height: 1.6;
+}
 .place-card__artists-label {
   margin: 0 0 8px;
   font-size: 12px;
@@ -65,13 +92,20 @@
   font-size: 18px;
   margin: 0;
   line-height: 1.4;
+
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
 }
 
 /* ===== CONTENIDO: IMAGEN + TEXTO ===== */
 .place-card__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 1fr;
   gap: 40px;
-  align-items: flex-start;
+  align-items: start;
 }
 
 .place-card__image {
@@ -86,6 +120,9 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin: 0;
+  padding: 0;
+  align-self: start; /* ← ¡Esta es la clave! */
 }
 
 .place-card__description {
