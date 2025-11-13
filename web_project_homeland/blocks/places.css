@@ -42,6 +42,7 @@
 .place-card__city {
   margin: 0 0 20px;
   font-weight: 900;
+  font-size: 72px;
   line-height: 1.2;
 }
 
@@ -53,12 +54,15 @@
 
 .place-card__artists-label {
   margin: 0 0 8px;
+  font-size: 12px;
   font-weight: bold;
+  color: rgb(170, 170, 170, 1);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .place-card__artists-names {
+  font-size: 18px;
   margin: 0;
   line-height: 1.4;
 }
@@ -77,12 +81,15 @@
   border-radius: 8px;
 }
 
-.place-card__text {
+.place-card__text-col {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .place-card__description {
-  margin: 0 0 15px;
+  margin: 0;
   line-height: 1.6;
 }
 
@@ -90,18 +97,18 @@
 .place-card__nft-button {
   display: inline-block;
   padding: 10px 24px;
-  background: linear-gradient(90deg, #3498db, #2980b9);
+  background: linear-gradient(90deg, rgba(2, 120, 254, 1), rgba(0, 58, 123, 1));
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .place-card__nft-button:hover {
-  background: linear-gradient(90deg, #2980b9, #1a5276);
+  background: linear-gradient(90deg, rgba(0, 58, 123, 1), rgba(0, 30, 70, 1));
   transform: translateY(-2px);
 }
 

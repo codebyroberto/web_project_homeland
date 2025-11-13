@@ -18,10 +18,10 @@ A través de tipografía cuidadosa, imágenes evocadoras y un diseño minimalist
 
 ## 🛠 Tecnologías utilizadas
 
-- **HTML5** – Estructura semántica (`<header>`, `<main>`, `<section>`, `<footer>`)
+- **HTML5** – Estructura semántica (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`)
 - **CSS3** – Estilos modulares con metodología **BEM (Flat)**
-- **CSS Grid** – Usado en `photo-grid` y `places` (requisito crítico del Sprint 6)
-- **Flexbox** – Para alineación interna de componentes
+- **CSS Grid** – Usado en la sección `photo-grid` (8 imágenes en 4 columnas)
+- **Flexbox** – Para alineación en `place-card__content` y organización del texto
 - **normalize.css** – Para consistencia entre navegadores
 - **Fuentes locales** – Familia **Inter** cargada en formato `.woff2`
 - **Responsive Design** – Compatible con desktop (1280px), tablet (768px) y mobile (320px)
@@ -41,12 +41,17 @@ El diseño está optimizado para tres tamaños de pantalla:
 ## ✨ Características clave del Sprint 6
 
 - ✅ **Sección `photo-grid`** con 8 imágenes en **CSS Grid (4 columnas en desktop)**
-- ✅ **Sección `places`** con tarjetas interactivas (ciudad, descripción, botón “Compra esta obra como NFT”)
-- ✅ **Botones estilizados** con estados `:hover` para accesibilidad
+- ✅ **Sección `places`** con **3 tarjetas** (Cricieth, Gales / Berea, EE. UU. / Muramvya, Burundi)
+- ✅ Cada tarjeta incluye:
+  - Título de ciudad
+  - Bloque “**ARTISTAS**” con nombres
+  - Imagen responsiva
+  - Dos párrafos de descripción
+  - Botón “**Compra esta obra como NFT**” con degradado y efecto `:hover`
 - ✅ **Imágenes responsivas** con `object-fit: cover` y `alt` en español
-- ✅ **Sin altura fija** en elementos de texto (usa `line-height` en lugar de `height`)
+- ✅ **Sin altura fija** en textos (solo `line-height`)
 - ✅ **No se usa `!important`**
-- ✅ **Validación W3C** – HTML semántico, sin `<b>`, `<i>`, ni `<br>` innecesarios
+- ✅ **HTML semántico y accesible** (sin `<b>`, `<i>`, `<br>` innecesarios)
 - ✅ **Metaetiquetas SEO completas** (`lang="es"`, `description`, `author`, `viewport`)
 
 ## 🗂 Estructura del proyecto
@@ -60,26 +65,25 @@ web_project_homeland/
 ├── pages/
 │ └── index.css # @import normalize → fonts → bloques
 ├── blocks/
-│ ├── page.css
 │ ├── header.css
 │ ├── gallery.css
-│ ├── photo-grid.css # NUEVO – Grid de 8 imágenes
-│ ├── places.css # NUEVO – Tarjetas con botón NFT
+│ ├── places.css # Contiene: photo-grid + place-card (3 tarjetas)
 │ └── footer.css
 ├── images/
 │ ├── hero-image.jpg
-│ ├── \_image (1).png
-│ ├── \_image (2).png
-│ ├── \_item_gales_g.png
-│ ├── \_item_atardercer.png
-│ ├── \_item_campo.png
-│ ├── \_item_ciudadio.png
-│ ├── \_item_playa.png
-│ ├── \_item_zonaverde.png
+│ ├── \_item_vista bahia.png
+│ ├── **item_gales_ch.png
+│ ├── **item_atardecer.png
+│ ├── **item_ciudadrio.png
+│ ├── **item_campo.png
+│ ├── **item_zonaverde.png
+│ ├── **item_casita.png
+│ ├── **item_casas.png
+│ ├── **image_gales_g.png
 │ └── logo.svg
 ├── vendor/
 │ ├── normalize.css
-│ ├── fonts.css # @font-face + family Inter
+│ ├── fonts.css # @font-face + family: Inter
 │ └── fonts/ # Archivos .woff2 de Inter
 └── README.md
 
