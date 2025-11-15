@@ -67,13 +67,8 @@
 }
 .gallery__quote {
   margin: 24px 0;
-  /*  Padding solo arriba y abajo (24px), 
-     y 0px a los lados.*/
   padding: 24px 0;
   width: 738px;
-  /* box-sizing: border-box; 
-     (Ya no es necesario si no hay padding horizontal) 
-  */
   text-align: left;
 }
 
@@ -137,7 +132,6 @@
 
   .gallery__quote {
     margin: 20px 0;
-    /* CAMBIADO: Padding solo vertical */
     padding: 20px 0;
     width: 600px;
   }
@@ -193,12 +187,10 @@
 
   .gallery__quote {
     margin: 16px 0;
-    /* CAMBIADO: Padding solo vertical */
     padding: 16px 0;
 
     width: 100%;
     max-width: 100%;
-    /* box-sizing: border-box; (No es necesario) */
   }
 
   .gallery__quote-text {
