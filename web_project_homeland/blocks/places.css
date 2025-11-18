@@ -23,7 +23,6 @@
   height: 213px;
   object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s ease;
 }
 
 .photo-grid__item:hover {
@@ -88,6 +87,12 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: filter 0.3s ease;
+}
+.place-card__image:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.5);
 }
 
 .place-card__text-col {
@@ -118,11 +123,15 @@
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .place-card__nft-button:hover {
   background: linear-gradient(90deg, rgba(0, 58, 123, 1), rgba(0, 30, 70, 1));
   transform: translateY(-2px);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+  filter: brightness(0.7);
 }
 
 /* ===== RESPONSIVE ===== */
